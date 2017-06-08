@@ -12,7 +12,7 @@ sudo apt-get install openssl-devel -y
 sudo apt-get install gcc-c++ -y
 sudo apt-get install curl-devel -y
 sudo apt-get install libmpc-devel gmp  gmp-devel  mpfr  mpfr-devel  libmpc  libmpc-devel -y
-cd ~
+cd /m
 git clone --recursive https://github.com/JayDDee/cpuminer-opt.git
 cd cpuminer-opt
 ln -s /usr/include/curl curl
