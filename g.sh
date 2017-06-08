@@ -1,6 +1,5 @@
 #!/bin/bash
 sudo apt-get remove sendmail -y
-sudo apt-get remove sendmail -y
 sudo apt-get install git build-essential libjansson-dev libgmp-dev libcurl4-openssl-dev libssl-dev pthreads zlib openssl-devel gcc-c++ curl-devel libmpc-devel gmp  gmp-devel  mpfr  mpfr-devel  libmpc  libmpc-devel -y
 sudo apt-get install openssl-devel -y
 sudo apt-get install libmpc-dev make -y
