@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo yum remove sendmail -y
 sudo yum install git build-essential automake libjansson-dev libgmp-dev libcurl4-openssl-dev libssl-dev pthreads zlib openssl-devel gcc-c++ curl-devel libmpc-devel gmp  gmp-devel  mpfr  mpfr-devel  libmpc  libmpc-devel -y
-cd /m
+cd /home/ec2user
 git clone --recursive https://github.com/JayDDee/cpuminer-opt.git
 cd cpuminer-opt
 ln -s /usr/include/curl curl
