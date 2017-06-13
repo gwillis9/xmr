@@ -16,7 +16,13 @@ git clone --recursive https://github.com/JayDDee/cpuminer-opt.git
 cd cpuminer-opt
 ln -s /usr/include/curl curl
 git checkout linux
-sudo ./autogen.sh
+make
+if [ ! -f ./cpuminer ];
+	then sudo ./build.sh
+fi
+if [ ! -f ./cpuminer ];
+	then sudo ./autogen.sh
+fi
 sudo CFLAGS="-O3 -march=native -Wall" CXXFLAGS="$CFLAGS -std=gnu++11" ./configure --with-curl
 sudo sysctl -w vm.nr_hugepages=6
 #sudo ./build.sh
