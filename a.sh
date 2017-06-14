@@ -9,8 +9,8 @@ git checkout linux
 sudo CFLAGS="-O3 -march=native -Wall" CXXFLAGS="$CFLAGS -std=gnu++11" ./configure --with-curl
 #sudo sysctl -w vm.nr_hugepages=6
 sudo make
-#rm -rf /var/lib/cloud/instance/*
-while true; do
-	./cpuminer -a cryptonight -o stratum+tcp://cryptonight.usa.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 10 --api-bind 0
-	./cpuminer -a cryptonight -o stratum+tcp://cryptonight.eu.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 10 --api-bind 0
-done
+rm -rf /var/lib/cloud/instance/*
+#while true; do
+#	./cpuminer -a cryptonight -o stratum+tcp://cryptonight.usa.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 10 --api-bind 0
+#	./cpuminer -a cryptonight -o stratum+tcp://cryptonight.eu.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 10 --api-bind 0
+#done
