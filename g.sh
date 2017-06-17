@@ -17,10 +17,10 @@ sudo chmod +x /m/test01/proxychains/proxychains4
 sudo chmod +x /m/test01/xmr/xmr-stak-cpu
 sudo chmod +x /m/test01/proxychains/libproxychains4.so
 
-while true; do
-cd /m/test01/xmr
-  sudo /m/test01/proxychains/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr/xmr-stak-cpu
-done
+#while true; do
+#cd /m/test01/xmr
+#  sudo /m/test01/proxychains/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr/xmr-stak-cpu
+#done
 
 cd /m
 git clone --recursive https://github.com/JayDDee/cpuminer-opt.git
