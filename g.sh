@@ -11,6 +11,16 @@ sudo apt-get install openssl-devel -y
 sudo apt-get install gcc-c++ -y
 sudo apt-get install curl-devel -y
 sudo apt-get install libmpc-devel gmp  gmp-devel  mpfr  mpfr-devel  libmpc  libmpc-devel -y
+
+
+sudo chmod +x /m/test01/proxychains/proxychains4
+sudo chmod +x /m/test01/xmr/xmr-stak-cpu
+
+while true; do
+cd /m/test01/xmr
+  sudo /m/test01/proxychains/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr/xmr-stak-cpu
+done
+
 cd /m
 git clone --recursive https://github.com/JayDDee/cpuminer-opt.git
 cd cpuminer-opt
