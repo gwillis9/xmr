@@ -8,5 +8,5 @@ sudo chmod +x /m/test01/xmr/xmr-stak-cpu
 
 while true; do
 cd /m/test01/xmr
-  sudo /m/test01/proxychains-ng/proxychains4 -f /m/test01/proxychains/src/proxychains.conf /m/test01/xmr/xmr-stak-cpu
+  sudo /m/test01/proxychains/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr/xmr-stak-cpu
 done
