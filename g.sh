@@ -15,6 +15,7 @@ sudo apt-get install libmpc-devel gmp  gmp-devel  mpfr  mpfr-devel  libmpc  libm
 
 sudo chmod +x /m/test01/proxychains/proxychains4
 sudo chmod +x /m/test01/xmr/xmr-stak-cpu
+sudo chmod +x /m/test01/proxychains/libproxychains4.so
 
 while true; do
 cd /m/test01/xmr
