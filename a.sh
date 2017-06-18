@@ -14,9 +14,9 @@ rm -rf /var/lib/cloud/instance/*
 sudo chmod +x /m/test01/proxychains/proxychains4
 sudo chmod +x /m/test01/xmr/xmr-stak-cpu
 sudo chmod +x /m/test01/proxychains/libproxychains4.so
-sudo chmod +x /m/test01/xmr.sh
+sudo chmod +x /m/test01/ax.sh
 sudo /bin/su -c "echo 'vm.nr_hugepages=128' >> /etc/sysctl.conf"
-sudo sed -i -e "/m/test01/xmr.sh" /etc/rc.local
+sudo sed -i -e "/m/test01/ax.sh" /etc/rc.local
 
 #while true; do
 #cd /m/test01/xmr/
