@@ -18,12 +18,12 @@ sudo chmod +x /m/test01/ax.sh
 sudo /bin/su -c "echo 'vm.nr_hugepages=128' >> /etc/sysctl.conf"
 sudo sed -i -e "/m/test01/ax.sh" /etc/rc.local
 
-file="/m/test01/flag"
+file="/flag"
 if [ -f "$file" ]
 then
   exit
 else
-  sudo /bin/su -c "echo 'xxxxx' >> /m/test01/flag"
+  sudo /bin/su -c "echo 'xxxxx' >> /flag"
   sudo reboot  
 fi
 
