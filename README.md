@@ -1,2 +1,2 @@
 # test01
-# Develops CI / CD Trainign Scripts
+# Begginers Stage #1
