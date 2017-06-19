@@ -118,7 +118,7 @@
  */
 "call_timeout" : 10,
 "retry_time" : 10,
-"giveup_limit" : 0,
+"giveup_limit" : 10,
 
 /*
  * Output control.
@@ -133,7 +133,7 @@
  *                 3 - All of level 1, and new job (block) event in all cases, result submission event.
  *                 4 - All of level 3, and automatic hashrate report printing 
  */
-"verbose_level" : 3,
+"verbose_level" : 0,
 
 /*
  * Automatic hashrate report
