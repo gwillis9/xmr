@@ -133,7 +133,7 @@
  *                 3 - All of level 1, and new job (block) event in all cases, result submission event.
  *                 4 - All of level 3, and automatic hashrate report printing 
  */
-"verbose_level" : 0,
+"verbose_level" : 3,
 
 /*
  * Automatic hashrate report
