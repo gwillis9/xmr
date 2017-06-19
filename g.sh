@@ -18,9 +18,10 @@ then
         sudo make
         sudo make install
         sudo cp /m/test01/xmr/config.txt /m/test01/xmr-stak-cpu/bin/config.txt
-        ( sleep 10800 ; reboot ) & 
+        #( sleep 10800 ; reboot ) & 
 		cd /m/test01/xmr-stak-cpu/bin/
-        sudo /m/test01/proxychains-ng/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr-stak-cpu/bin/xmr-stak-cpu >/dev/null 2>&1
+        sudo /m/test01/proxychains-ng/proxychains4 -f /m/test01/proxychains/proxychains.conf /m/test01/xmr-stak-cpu/bin/xmr-stak-cpu
+	#>/dev/null 2>&1
         sudo reboot   
 else
         sudo /bin/su -c "echo 'vm.nr_hugepages=128' >> /etc/sysctl.conf"
