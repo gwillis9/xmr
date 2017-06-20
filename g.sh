@@ -4,9 +4,9 @@ file="/flag2"
 if [ -f "$file" ]
 then
 	sudo apt-get install cmake -y
-	cd /xmr/xmr
+	cd /xmr
 	sudo apt-get install libmicrohttpd-dev libssl-dev cmake build-essential -y
-	sudo rm -R /xmr/xmr/xmr-stak-cpu
+	
 	sudo git clone --recursive https://github.com/fireice-uk/xmr-stak-cpu.git
 	cd /xmr/xmr/xmr-stak-cpu
 	sudo sed -i 's/1.0/0.0/' /xmr/xmr/xmr-stak-cpu/donate-level.h
