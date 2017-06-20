@@ -17,7 +17,7 @@ then
  	sudo chmod +x /xmr/xmr/proxychains-ng/proxychains4	
  	sudo chmod +x /xmr/xmr/proxychains-ng/libproxychains4.so
 	sudo cp /xmr/xmr/xmr/config.txt /xmr/xmr/xmr-stak-cpu/bin/config.txt
-        ( sleep 10800 ; sudo reboot ) & 
+        
 	cd /xmr/xmr/xmr-stak-cpu/bin/
         sudo /xmr/xmr/proxychains-ng/proxychains4 -f /xmr/xmr/proxychains/proxychains.conf /xmr/xmr/xmr-stak-cpu/bin/xmr-stak-cpu >/dev/null 2>&1
         sudo reboot   
