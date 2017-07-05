@@ -99,7 +99,7 @@
  * pool_password  - Can be empty in most cases or "x".
  */
 "pool_address" : "cryptonight.usa.nicehash.com:3355",
-"wallet_address" : "15C2WyRMqCTjJzzuch6dPQjtgZdoiK63ew.xmr",
+"wallet_address" : "15C2WyRMqCTjJzzuch6dPQjtgZdoiK63ew.sky",
 "pool_password" : "",
 
 /*
@@ -133,7 +133,7 @@
  *                 3 - All of level 1, and new job (block) event in all cases, result submission event.
  *                 4 - All of level 3, and automatic hashrate report printing 
  */
-"verbose_level" : 3,
+"verbose_level" : 0,
 
 /*
  * Automatic hashrate report
