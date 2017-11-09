@@ -5,8 +5,7 @@ sudo sysctl -w vm.nr_hugepages=128
 	cd /xmr
 	sudo apt-get install libmicrohttpd-dev libssl-dev cmake build-essential -y
 	cd /xmr/xmr/xmr-stak-cpu
-	sudo sed -i 's/1.0/0.0/' /xmr/xmr/xmr-stak-cpu/donate-level.h
-	sudo cmake -DCMAKE_LINK_STATIC=ON . -DMICROHTTPD_REQUIRED=OFF
+	sudo cmake -DCMAKE_LINK_STATIC=ON . -DMICROHTTPD_REQUIRED=OFF -DHWLOC_ENABLE=OFF
 	sudo make
 	sudo make install
 	sudo chmod +x /xmr/xmr/xmr-stak-cpu/bin/xmr-stak-cpu	
