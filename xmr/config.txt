@@ -111,9 +111,9 @@
  *
  * We feature pools up to 1MH/s. For a more complete list see M5M400's pool list at www.moneropools.com
  */
-"pool_address" : "cryptonight.usa.nicehash.com:3355",
-"wallet_address" : "15C2WyRMqCTjJzzuch6dPQjtgZdoiK63ew.goog",
-"pool_password" : "",
+""pool_address" : "graftpool.net:5555",
+"wallet_address" : "GCg1BKxCHepCj3SZ5Wa9PrU5x3kQ8G98H9FoxsSRVWVhT3RX16rUJghGRQ14p1z6L32KtchjsHju3QBnuJ5RszK22YuWPcX.graft1",
+"pool_password" : "x",
 
 /*
  * Network timeouts.
